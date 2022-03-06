@@ -5,7 +5,9 @@
    <h2><%=row.title %></h2>
    <p><%=row.content %></p>
    <a href="<%= post_path(row.id) %>" class="btn btn-primary">See post</a>
-   <a href="<%= edit_post_path(row.id) %>" class="btn btn-success">Edit</a>
+   <a href="<%= edit_post_path(row.id) %>" class="btn btn-default">Edit</a>
 
  </div>
 <% end %>
+
+<a href="<%= new_post_path %>" class="btn btn-success">New</a>
