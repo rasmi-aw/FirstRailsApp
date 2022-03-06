@@ -1,0 +1,18 @@
+<h1>Edit your post</h1>
+
+<div class="container jumbotron">
+
+
+ <div class="form-group">
+
+   <%= form_for @post do |p| %>
+     <%= p.text_field :title ,class:'form-control my-3'%>
+     <%= p.text_field :content ,class:'form-control my-3' %>
+     <%= p.submit  "Edit post",class:'btn btn-success my-3' %>
+   <% end %>
+
+ </div>
+
+
+
+</div>

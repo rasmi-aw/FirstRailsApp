@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   root to: "pages#home"
   get '/welcome(/:lang)', to: "pages#welcome", as:'welcome'
+  resources :posts
+
 end

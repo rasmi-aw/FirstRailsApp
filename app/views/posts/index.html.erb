@@ -1,0 +1,11 @@
+
+<h1>Posts</h1>
+<%= @posts.each do |row| %>
+ <div class="container jumbotron">
+   <h2><%=row.title %></h2>
+   <p><%=row.content %></p>
+   <a href="<%= post_path(row.id) %>" class="btn btn-primary">See post</a>
+   <a href="<%= edit_post_path(row.id) %>" class="btn btn-success">Edit</a>
+
+ </div>
+<% end %>
