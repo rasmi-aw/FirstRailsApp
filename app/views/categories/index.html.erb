@@ -1,0 +1,12 @@
+<h1>Categories</h1>
+<%= @categories.each do |row| %>
+  <div class="container jumbotron">
+    <h2><%= row.name %></h2>
+    <p><%= row.slug %></p>
+    <a href="<%= category_path(row.id) %>" class="btn btn-primary">See Category</a>
+    <a href="<%= edit_category_path(row.id) %>" class="btn btn-success">Edit</a>
+    <a href="<%= category_path(row.id) %>" data-method="DELETE" class="btn btn-danger" data-confirm="Are you sure to delete the category named: <%= row.name %>">Delete</a>
+  </div>
+<% end %>
+
+<a href="<%= new_category_path %>" class="btn btn-success">New Category</a>

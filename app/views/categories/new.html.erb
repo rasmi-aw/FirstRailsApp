@@ -1,0 +1,9 @@
+<div class="form-group">
+
+  <%= form_for @category do |p| %>
+    <%= p.text_field :name ,class:'form-control my-3'%>
+    <%= p.text_area :slug ,class:'form-control my-3' %>
+    <%= p.submit  "Add Category",class:'btn btn-success my-3' %>
+  <% end %>
+
+</div>
