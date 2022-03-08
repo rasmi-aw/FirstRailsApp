@@ -2,7 +2,7 @@
 
   <%= form_for @post do |p| %>
     <%= p.text_field :title ,class:'form-control my-3'%>
-    <%= p.text_field :content ,class:'form-control my-3' %>
+    <%= p.text_area :content ,class:'form-control my-3' %>
     <%= p.submit  "Add post",class:'btn btn-success my-3' %>
   <% end %>
 

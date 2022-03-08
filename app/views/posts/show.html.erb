@@ -1,6 +1,17 @@
-
+<% begin
+     @row = Analytics.find(@post.id)
+     @row.visited +=1
+     @row.save
+     @visited = @row.visited
+   rescue Exception
+     #case it's not found
+     Analytics.create(id: @post.id, visited:1)
+     @visited = 1;
+   end
+%>
 <div class="container jumbotron">
-  <h2><%=@post.title %></h2>
-  <p><%=@post.content %></p>
+  <h2><%= @post.title %></h2>
+  <p><%= @post.content %></p>
   <a href="/posts" class="btn btn-primary">Back to posts list</a>
+  <p class="float-right">Visits: <%= @visited %>&nbsp; times</p>
 </div>

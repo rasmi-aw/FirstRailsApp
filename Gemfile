@@ -3,6 +3,15 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.0.3"
 
+#jequery_ujs installation
+gem 'bootstrap', '~> 4.2.0'
+gem 'chart-js-rails'
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'select2-rails'
+gem "execjs"
+gem "therubyracer"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.2", ">= 7.0.2.2"
 

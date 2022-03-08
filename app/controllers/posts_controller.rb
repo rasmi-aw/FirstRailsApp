@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   end
 
   def show
-
+    @post = Post.find(params[:id])
   end
 
   def edit
@@ -31,6 +31,8 @@ class PostsController < ApplicationController
   end
 
   def destroy
-
+    @post = Post.find(params[:id])
+    Analytics.destroy(@post.id)
+    @post.destroy
   end
 end

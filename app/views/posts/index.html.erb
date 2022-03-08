@@ -1,13 +1,14 @@
-
 <h1>Posts</h1>
 <%= @posts.each do |row| %>
- <div class="container jumbotron">
-   <h2><%=row.title %></h2>
-   <p><%=row.content %></p>
-   <a href="<%= post_path(row.id) %>" class="btn btn-primary">See post</a>
-   <a href="<%= edit_post_path(row.id) %>" class="btn btn-default">Edit</a>
+  <div class="container jumbotron">
+    <h2><%= row.title %></h2>
+    <p><%= row.content %></p>
+    <a href="<%= post_path(row.id) %>" class="btn btn-primary">See post</a>
+    <a href="<%= edit_post_path(row.id) %>" class="btn btn-success">Edit</a>
+    <a href="<%= posts_path(row.id) %>" data-method="DELETE" class="btn btn-danger" data-confirm="Are you sure to delete the post named: <%= row.title %>">Delete</a>
+    <%= link_to :"Delete", row, :confirm => "Do you really want to delete this post ?", method: "DELETE", class: "btn btn-danger" %>
 
- </div>
+  </div>
 <% end %>
 
 <a href="<%= new_post_path %>" class="btn btn-success">New</a>
