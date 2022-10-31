@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   root to: "pages#home"
-  get '/welcome(/:lang)', to: "pages#welcome", as:'welcome'
+  get '/welcome(/:lang)', to: "pages#welcome", as: 'welcome'
   resources :posts
   resources :categories
+  resources :documentation
 
 end
